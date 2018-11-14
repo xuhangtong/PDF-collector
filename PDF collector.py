@@ -65,11 +65,11 @@ while i<100:
 
                 #ELSE SAVE THE HREF LINK TO URL LIST FOR FURTHER VISIT
                 else:
+                        if current_link .startswith('/'):
+                                current_link = domain_name + current_link
                         if current_link not in urls_list:
                                 if current_link.startswith('http'):
                                         urls_list.append(current_link)
-                                if current_link.startswith('/'):
-                                        urls_list.append(domain_name+current_link)
 
         i+=1
         print('current url numbers: ' + str(len(urls_list)))
